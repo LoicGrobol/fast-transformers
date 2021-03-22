@@ -2,11 +2,11 @@
 name: tests
 
 # Test only pushes on master or pull requests on master
-# on:
-#   push:
-#     branches: [master, test-workflow]
-#   pull_request:
-#     branches: [master]
+on:
+  push:
+    # branches: [master, test-workflow]
+  pull_request:
+    # branches: [master]
 
 # Build and run the tests
 jobs:
