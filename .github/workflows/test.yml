@@ -51,7 +51,8 @@ jobs:
         uses: joerick/cibuildwheel@v1.10.0
         env:
           CIBW_BEFORE_ALL_LINUX: tools/prepare_build_environment_linux.sh
-          CIBW_SKIP: cp27-* pp* *i686
+          CIBW_ARCHS: "x86_64"
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
 
       - name: Upload Python wheels
         uses: actions/upload-artifact@v2
