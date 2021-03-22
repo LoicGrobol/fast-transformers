@@ -49,7 +49,6 @@ jobs:
 
       - name: Build wheels
         uses: joerick/cibuildwheel@v1.10.0
-        run:  python -m cibuildwheel python --output-dir python/wheelhouse
         env:
           CIBW_BEFORE_ALL_LINUX: tools/prepare_build_environment_linux.sh
           CIBW_SKIP: cp27-* pp* *i686
